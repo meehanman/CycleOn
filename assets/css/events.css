@@ -1,0 +1,45 @@
+
+#reward-count{
+    display: inline;
+    text-align: right;
+    margin-right: 20px;
+}
+
+.bg{
+    background-color: #EEEEEE;
+}
+
+#header {
+    height: 100px;
+    width: 100%;
+    margin-top: ;
+    padding-bottom: 0px;
+    background-color: #0399d8;
+    
+}
+
+#header .content {
+    display: inherit;
+}
+
+
+#header h1{
+    color: #fff;
+    font-size: 40px;
+    padding-right: 30px;
+    text-align: right;
+    padding-top: 10px;
+    margin-top: 20px;
+    float: right;
+}
+
+#reward-count h4 {
+    color: #fff;
+    padding-right: 10px;
+    font-size: 20px;
+    text-align: right;
+    padding-top: -10px;
+    margin-top:70px;
+    margin-right: -165px;
+    float: right;
+}
