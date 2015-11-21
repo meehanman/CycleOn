@@ -5,8 +5,8 @@ nav {
 }
 deanPoints {
     float: right;
-    margin-top: -10px;
     padding: 0px 5px;
+    margin-top: 10px;
     border-radius: 10px;
     background-color: white;
     color: #00B4FF;
@@ -16,10 +16,38 @@ bikeHead {
     height: 500px;
     width: 100%;
     display: block;
+    margin-right: -100px;
 }
 app-but-buttons {
     width: 50%;
+    background-color: white;
 }
-blue{
+blue {
     background-color: #00B4FF;
+}
+.faceimage {
+    border-radius: 50px/50px;
+}
+#name{
+    padding-left:10px;
+}
+nav > ul > img {
+    height: 50px;
+    position: relative;
+    float: right;
+    padding-right: 20px;
+}
+bikenametitle {
+    color: white;
+    display: block;
+    padding-top: 50px;
+    font-size: 20px;
+}
+bikeHead {
+    padding-left: 20px;
+}
+superpod {
+    color: white;
+    padding-top: 30px;
+    margin-top:40px;
 }
