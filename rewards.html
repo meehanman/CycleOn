@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="assets/css/app.css" type="text/css">
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
-<body ng-app="rewardsapp" class="bg">
+<body ng-app="cycleapp" class="bg">
     <!--Menu-->
         <nav>
         <ul class="right hide-on-med-and-down">
@@ -36,22 +36,24 @@
     <!--Menu End-->
     
     <!--Main Content-->
-    <div class="main" ng-controller="RewardsController">
+        
         
         <!--Header-->
+    <div class="profile" ng-controller="AccountController">
         <div id="header">
             <div class="content">
                 <div class="col s4">
             <div id="logo"></div>
                     </div>
                 <div class="col s8">
-                <h1>{{title}}</h1>
-            <span id="reward-count"><h4>Balance:  {{rewardCount}}</h4></span>
+                <h1>Rewards</h1>
+            <span id="reward-count"><h4>Balance: {{credit}}</h4></span>
                 </div>
                 </div>
         </div>
+        </div>
         <!--Header End-->
-                    
+<div class="main" ng-controller="RewardsController">  
         <!--Rewards-->
         <div ng-repeat="reward in rewards">
             <div class="col s12 m6">
@@ -84,6 +86,8 @@
     <script src="assets/js/app.js">
     </script>
     <script src="assets/js/Controllers/RewardsController.js">
+    </script>
+        <script src="assets/js/Controllers/AccountController.js">
     </script>
     <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
