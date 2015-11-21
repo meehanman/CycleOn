@@ -10,29 +10,33 @@
     <title>CycleON</title>
 
     <!-- Compiled and minified CSS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js">
+    </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
 
     <link rel="stylesheet" href="assets/css/app.css" type="text/css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
-<body>
-    <nav>
+<body ng-app="cycleapp">
+        <nav>
+            <div id="profile" ng-controller="AccountController">
         <ul>
-            <img style="" src="assets/img/170whilwithguy.png" />
+            <img src="assets/img/170whilwithguy.png" />
         </ul>
         <ul id="slide-out" class="side-nav">
 
             <li>
 
-                <p style="color:black;line-height: 16px;"><img class="faceimage" align="center" src="http://lorempixel.com/70/70/"> <b id="name">Anabelle Smith</b>
+                <p style="color:black;line-height: 16px;"><img class="faceimage" align="center" src="http://lorempixel.com/70/70/"> <b id="name">{{name}}</b>
                     <br> </p>
             </li>
             <hr>
-            <li><a href="#!">Home</a></li>
-            <li><a href="#!">Fix It</a></li>
-            <li><a href="#!">Shop</a></li>
-            <li><a href="#!">Events</a></li>
+            <div id="nav" ng-controller="NavController">
+                <div ng-repeat="link in links">
+                    <li><a ng-href="{{link.url}}">{{link.title}}</a></li>
+                </div>
+            </div>
             <br>
 
             <br>
@@ -42,22 +46,34 @@
 
         </ul>
         <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+            </div>
     </nav>
 
-    <deanPoints>You have <b>503</b> reward points!</deanPoints>
+    <div class="profile" ng-controller="AccountController">
+    <deanPoints>You have <b>{{credit}}</b> reward points!</deanPoints>
     <bikeHead>
         <superpod>Reciept</superpod><superpod>Upgrade</superpod>
         <bikenametitle>Carrera Vulcan Mens Mountain Bike 2015</bikenametitle>
     <biketyle>Mountain Bike</biketyle></bikeHead>
     
-    
+    </div>  
     <footer class="blue">
         <a class="app-but-buttons waves-effect waves-light btn-large col s6" style="width:49%;background-color:white;color:#00B4FF;" href="fixit.html">Fit It</a>
         <a class="app-but-buttons waves-effect waves-light btn-large col s6" style="width:49%;background-color:white;color:#00B4FF;" href="events.html">Events</a> </footer>
 
 
     <!-- Compiled and minified JavaScript -->
+    
+        <script src="assets/js/app.js">
+    </script>
+    <script src="assets/js/Controllers/RewardsController.js">
+    </script>
+        <script src="assets/js/Controllers/AccountController.js">
+    </script>
+    <script src="assets/js/Controllers/NavController.js">
+    </script>
     <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
     <script>
         $(document).ready(function() {
