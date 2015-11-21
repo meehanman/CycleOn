@@ -1,11 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
     <title>Rewards</title>
-    <link rel="stylesheet" href="assets/css/app.css">
-  </head>
-  <body>
-    
-  </body>
+    <link href="assets/css/rewards.css" rel="stylesheet">
+    <link href="assets/css/app.css" rel="stylesheet">
+    <link crossorigin="anonymous" href=
+    "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"
+    integrity=
+    "sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ=="
+    rel="stylesheet">
+    <script src=
+    "https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js">
+    </script>
+    <script src=
+    "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js">
+    </script>
+</head>
+<body ng-app="rewardsapp">
+    <div class="main" ng-controller="RewardsController">
+            
+                <div class="col-xs-12">
+                    <div ng-repeat="reward in rewards">
+                        
+                    <div class="row">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <div class="row">
+                                <div class="col-xs-8">
+                                    <label>{{ reward.name }}</label>
+                                </div>
+                                <div class="col-xs-4 text-right">
+                                    <input type="button" value="Claim" id="btnClaim" ng-click="claimReward(reward.id)" class="btn btn-warning">
+                                </div>
+                                    </div>
+                                <hr>
+                                <label>{{ reward.description }}</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <script src="assets/js/app.js">
+    </script>
+    <script src="assets/js/Controllers/RewardsController.js">
+    </script>
+</body>
 </html>
