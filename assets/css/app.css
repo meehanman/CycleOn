@@ -3,3 +3,23 @@
 nav {
     background-color: #00B4FF;
 }
+deanPoints {
+    float: right;
+    margin-top: -10px;
+    padding: 0px 5px;
+    border-radius: 10px;
+    background-color: white;
+    color: #00B4FF;
+}
+bikeHead {
+    background-color: #44B4FF;
+    height: 500px;
+    width: 100%;
+    display: block;
+}
+app-but-buttons {
+    width: 50%;
+}
+blue{
+    background-color: #00B4FF;
+}
