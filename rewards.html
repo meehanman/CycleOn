@@ -5,46 +5,45 @@
     <title>Rewards</title>
     <link href="assets/css/rewards.css" rel="stylesheet">
     <link href="assets/css/app.css" rel="stylesheet">
-    <link crossorigin="anonymous" href=
-    "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"
-    integrity=
-    "sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ=="
-    rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src=
     "https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js">
-    </script>
-    <script src=
-    "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js">
     </script>
 </head>
 <body ng-app="rewardsapp">
     <div class="main" ng-controller="RewardsController">
             
-                <div class="col-xs-12">
+                    
                     <div ng-repeat="reward in rewards">
                         
-                    <div class="row">
-                        <div class="panel panel-default">
-                            <div class="panel-body">
-                                <div class="row">
-                                <div class="col-xs-8">
-                                    <label>{{ reward.name }}</label>
-                                </div>
-                                <div class="col-xs-4 text-right">
-                                    <input type="button" value="Claim" id="btnClaim" ng-click="claimReward(reward.id)" class="btn btn-warning">
-                                </div>
-                                    </div>
-                                <hr>
-                                <label>{{ reward.description }}</label>
-                            </div>
+                        <div class="col s12 m6">
+                        <div class="card">
+    <div class="card-image waves-effect waves-block waves-light">
+      <img class="activator" src="images/office.jpg">
+    </div>
+    <div class="card-content">
+        <div class="row">
+      <span class="card-title activator grey-text text-darken-4">{{ reward.name }}<i class="material-icons right">more_vert</i></span>
+            </div>
+        <div class="row">
+      <button class="btn waves-effect waves-light" type="submit" name="action">Claim<i class="material-icons right">grade</i></button>
+            </div>
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">{{ reward.name }}<i class="material-icons right">close</i></span>
+      <p>{{ reward.description }}</p>
+    </div>
                         </div>
-                    </div>
-                </div>
+                        </div>
+                        
             </div>
     </div>
     <script src="assets/js/app.js">
     </script>
     <script src="assets/js/Controllers/RewardsController.js">
     </script>
+    <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
 </body>
 </html>
