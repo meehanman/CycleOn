@@ -1,5 +1,6 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,25 +12,25 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js">
     </script>
     <link rel="stylesheet" href="assets/css/app.css" type="text/css">
-      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <style>
-        .card .card-action a{
-             color:#fff;
+        .card .card-action a {
+            color: #fff;
         }
 
-          .card .card-action a:hover{
-             color:lightgrey;
+        .card .card-action a:hover {
+            color: lightgrey;
         }
-
     </style>
 </head>
-<body ng-app="rewardsapp" class="bg">
+
+<body ng-app="cycleapp" class="bg">
     <!--Menu-->
- <nav>
+    <nav>
         <div id="profile" ng-controller="AccountController">
             <ul>
 
-                <img class="titleImage" style="float:right;margin-right:130px;margin-top:3px;margin-bottom:3px;height:50px;padding-right:30px;" src="assets/img/170whilwithguy.png"/>
+                <img class="titleImage" style="float:right;margin-right:130px;margin-top:3px;margin-bottom:3px;height:50px;padding-right:30px;" src="assets/img/170whilwithguy.png" />
                 <img style="float:right;margin-right:-280px;margin-top:11px;" src="assets/img/shoppingcartwhite2%20copy.png" />
 
             </ul>
@@ -66,351 +67,415 @@
         <div id="header">
             <div class="content">
                 <div class="col s4">
-            <div id="logo"></div>
-                    </div>
+                    <div id="logo"></div>
+                </div>
                 <div class="col s8">
-                <h1>Fix it</h1>
-            <span id="reward-count"><h4>Current Bike: Bike Name</h4></span>
+                    <h1>Fix it</h1>
+                    <span id="reward-count"><h4>Current Bike: Bike Name</h4></span>
                 </div>
-                </div>
+            </div>
         </div>
         <!--Header End-->
 
         <!--Rewards-->
 
-            <div class="col s12 m6">
-                <div class="card hoverable">
-                    <div class="card-content">
-                        <span class="card-title grey-text text-darken-4">
+        <div class="col s12 m6">
+            <div class="card hoverable">
+                <div class="card-content">
+                    <span class="card-title grey-text text-darken-4">
                           Please Select Problem Area:
                         </span>
-                        <br> <br>
+                    <br>
+                    <br>
 
-                        <div class="col s10">
-                            <img style="margin-left:5%;" src="assets/img/FixItBike.png"> </div>
+                    <div class="col s10">
+                        <img style="margin-left:5%;" src="assets/img/FixItBike.png"> </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col s12 m6">
+            <div class="card hoverable">
+                <div class="card-content">
+
+                    <br>
+
+                    <div class="col s10">
+
+                        <ul class="collapsible" data-collapsible="accordion">
+                            <li>
+                                <div class="collapsible-header"><i class="material-icons">filter_drama</i>Wheels</div>
+                                <div class="collapsible-body">
+                                    <!-- Input Check -->
+                                    <p>
+                                        <input type="checkbox" id="test1" />
+                                        <label for="test1">Repair Bent Spokes</label>
+                                    </p>
+
+                                    <!-- End Input Check -->
+                                    <!-- Input Check -->
+                                    <p>
+                                        <input type="checkbox" id="test2" />
+                                        <label for="test2">Repair Buckled Wheel</label>
+                                    </p>
+
+                                    <!-- End Input Check -->
+                                    <!-- Input Check -->
+                                    <p>
+                                        <input type="checkbox" id="test3" />
+                                        <label for="test3">Repair Wheel Bearing</label>
+                                    </p>
+
+                                    <!-- End Input Check -->
+                                    <!-- Input Check -->
+                                    <p>
+                                        <input type="checkbox" id="test4" />
+                                        <label for="test4">Repair Loose Reflectors</label>
+                                    </p>
+
+                                    <!-- End Input Check -->
+
+
+
+                                </div>
+                            </li>
+                            <li>
+                                <div class="collapsible-header"><i class="material-icons">place</i>Tyre</div>
+                                <div class="collapsible-body">
+                                    <!-- Input Check -->
+                                    <p>
+                                        <input type="checkbox" id="test6" />
+                                        <label for="test6">Repair Puncture</label>
+                                    </p>
+
+                                    <!-- End Input Check -->
+                                    <!-- Input Check -->
+                                    <p>
+                                        <input type="checkbox" id="test7" />
+                                        <label for="test7">Repair Ripped Tyre</label>
+                                    </p>
+
+                                    <!-- End Input Check -->
+                                    <!-- Input Check -->
+                                    <p>
+                                        <input type="checkbox" id="test8" />
+                                        <label for="test8">Repair Valve</label>
+                                    </p>
+
+
+                                </div>
+                            </li>
+                            <li>
+                                <div class="collapsible-header"><i class="material-icons">whatshot</i>Chain</div>
+                                <div class="collapsible-body">
+                                    <!-- Input Check -->
+                                    <p>
+                                        <input type="checkbox" id="test99" />
+                                        <label for="test99">Repair Slipped Chain (Fallen Off)</label>
+                                    </p>
+
+                                    <!-- End Input Check -->
+                                    <!-- Input Check -->
+                                    <p>
+                                        <input type="checkbox" id="test10" />
+                                        <label for="test10">Repair Broken Link</label>
+                                    </p>
+
+                                    <!-- End Input Check -->
+                                    <!-- Input Check -->
+                                    <p>
+                                        <input type="checkbox" id="test11" />
+                                        <label for="test11">Repair Skipping Noise</label>
+                                    </p>
+
+                                    <!-- End Input Check -->
+                                </div>
+                            </li>
+                            <li>
+                                <div class="collapsible-header"><i class="material-icons">filter_drama</i>Seat</div>
+                                <div class="collapsible-body">
+                                    <!-- Input Check -->
+                                    <p>
+                                        <input type="checkbox" id="test13" />
+                                        <label for="test13">Repair Loose Seat</label>
+                                    </p>
+
+                                    <!-- End Input Check -->
+                                    <!-- Input Check -->
+                                    <p>
+                                        <input type="checkbox" id="test14" />
+                                        <label for="test14">Repair Torn Material</label>
+                                    </p>
+
+                                    <!-- End Input Check -->
+                                </div>
+                            </li>
+                            <li>
+                                <div class="collapsible-header"><i class="material-icons">filter_drama</i>Handlebar</div>
+                                <div class="collapsible-body">
+                                    <!-- Input Check -->
+                                    <p>
+                                        <input type="checkbox" id="test15" />
+                                        <label for="test15">Repair Loose Handlebar</label>
+                                    </p>
+
+                                    <!-- End Input Check -->
+                                    <!-- Input Check -->
+                                    <p>
+                                        <input type="checkbox" id="test17" />
+                                        <label for="test17">Repair Loose Grips</label>
+                                    </p>
+
+                                    <!-- End Input Check -->
+                                    <!-- Input Check -->
+                                    <p>
+                                        <input type="checkbox" id="test16" />
+                                        <label for="test16">Repair Brake Lever</label>
+                                    </p>
+
+                                    <!-- End Input Check -->
+                                    <!-- Input Check -->
+                                    <p>
+                                        <input type="checkbox" id="test18" />
+                                        <label for="test18">Repair Gear Leaver</label>
+                                    </p>
+
+                                    <!-- End Input Check -->
+                                </div>
+                            </li>
+                            <li>
+                                <div class="collapsible-header"><i class="material-icons">filter_drama</i>Brakes (V-Shape)</div>
+                                <div class="collapsible-body">
+                                    <!-- Input Check -->
+                                    <p>
+                                        <input type="checkbox" id="test19" />
+                                        <label for="test19">Repair Sloppy Brakes</label>
+                                    </p>
+
+                                    <!-- End Input Check -->
+                                    <!-- Input Check -->
+                                    <p>
+                                        <input type="checkbox" id="test20" />
+                                        <label for="test20">Repair Worn Pads</label>
+                                    </p>
+
+                                    <!-- End Input Check -->
+                                    <!-- Input Check -->
+                                    <p>
+                                        <input type="checkbox" id="test21" />
+                                        <label for="test21">Repair Retaining Spring</label>
+                                    </p>
+
+                                    <!-- End Input Check -->
+
+                                </div>
+                            </li>
+                            </li>
+                            <li>
+                                <div class="collapsible-header"><i class="material-icons">filter_drama</i>Brakes (Disc Brakes)</div>
+                                <div class="collapsible-body">
+                                    <!-- Input Check -->
+                                    <p>
+                                        <input type="checkbox" id="test22" />
+                                        <label for="test22">Repair Sloppy Brakes</label>
+                                    </p>
+
+                                    <!-- End Input Check -->
+                                    <!-- Input Check -->
+                                    <p>
+                                        <input type="checkbox" id="test23" />
+                                        <label for="test23">Repair Worn Pads</label>
+                                    </p>
+
+                                    <!-- End Input Check -->
+                                    <!-- Input Check -->
+                                    <p>
+                                        <input type="checkbox" id="test24" />
+                                        <label for="test24">Repair Retaining Spring</label>
+                                    </p>
+
+                                    <!-- End Input Check -->
+
+                                </div>
+                            </li>
+                            <li>
+                                <div class="collapsible-header"><i class="material-icons">filter_drama</i>Suspension</div>
+                                <div class="collapsible-body">
+                                    <!-- Input Check -->
+                                    <p>
+                                        <input type="checkbox" id="test25" />
+                                        <label for="test25">Repair Leaking Suspension</label>
+                                    </p>
+
+                                    <!-- End Input Check -->
+                                    <!-- Input Check -->
+                                    <p>
+                                        <input type="checkbox" id="test26" />
+                                        <label for="test26">Repair Rubber Seal</label>
+                                    </p>
+
+                                    <!-- End Input Check -->
+
+
+
+                                </div>
+                            </li>
+                            <li>
+                                <div class="collapsible-header"><i class="material-icons">filter_drama</i>Pedal</div>
+                                <div class="collapsible-body">
+                                    <!-- Input Check -->
+                                    <p>
+                                        <input type="checkbox" id="test27" />
+                                        <label for="test27">Repair Cracked Pedel</label>
+                                    </p>
+
+                                    <!-- End Input Check -->
+                                    <!-- Input Check -->
+                                    <p>
+                                        <input type="checkbox" id="test28" />
+                                        <label for="test28">Replace Reflectors</label>
+                                    </p>
+
+                                    <!-- End Input Check -->
+                                    <!-- Input Check -->
+                                    <p>
+                                        <input type="checkbox" id="test24" />
+                                        <label for="test24">Repair Retaining Spring</label>
+                                    </p>
+
+                                    <!-- End Input Check -->
+
+                                </div>
+                            </li>
+                        </ul>
+
+
+
                     </div>
-
+                </div>
+                <div class="card-action">
+                    <a class="waves-effect waves-light blue btn-large"><i class="material-icons left">cloud</i>button</a>
+                    <a class="waves-effect waves-light blue btn-large"><i class="material-icons left">cloud</i>button</a>
                 </div>
             </div>
-
-            <div class="col s12 m6">
-                <div class="card hoverable">
-                    <div class="card-content">
-
-                        <br>
-
-                        <div class="col s10">
-
-                                 <ul class="collapsible" data-collapsible="accordion">
-    <li>
-      <div class="collapsible-header"><i class="material-icons">filter_drama</i>Wheels</div>
-      <div class="collapsible-body">
-          <!-- Input Check -->
-    <p>
-      <input type="checkbox" id="test1" />
-      <label for="test1">Repair Bent Spokes</label>
-    </p>
-
-        <!-- End Input Check -->
-                    <!-- Input Check -->
-    <p>
-      <input type="checkbox" id="test2" />
-      <label for="test2">Repair Buckled Wheel</label>
-    </p>
-
-        <!-- End Input Check -->
-                    <!-- Input Check -->
-    <p>
-      <input type="checkbox" id="test3" />
-      <label for="test3">Repair Wheel Bearing</label>
-    </p>
-
-        <!-- End Input Check -->
-                    <!-- Input Check -->
-    <p>
-      <input type="checkbox" id="test4" />
-      <label for="test4">Repair Loose Reflectors</label>
-    </p>
-
-        <!-- End Input Check -->
-
-
-
         </div>
-    </li>
-    <li>
-      <div class="collapsible-header"><i class="material-icons">place</i>Tyre</div>
-      <div class="collapsible-body">
-                    <!-- Input Check -->
-    <p>
-      <input type="checkbox" id="test6" />
-      <label for="test6">Repair Puncture</label>
-    </p>
-
-        <!-- End Input Check -->
-                    <!-- Input Check -->
-    <p>
-      <input type="checkbox" id="test7" />
-      <label for="test7">Repair Ripped Tyre</label>
-    </p>
-
-        <!-- End Input Check -->
-                    <!-- Input Check -->
-    <p>
-      <input type="checkbox" id="test8" />
-      <label for="test8">Repair Valve</label>
-    </p>
-
-
-        </div>
-    </li>
-    <li>
-      <div class="collapsible-header"><i class="material-icons">whatshot</i>Chain</div>
-      <div class="collapsible-body">
-                  <!-- Input Check -->
-    <p>
-      <input type="checkbox" id="test99" />
-      <label for="test99">Repair Slipped Chain (Fallen Off)</label>
-    </p>
-
-        <!-- End Input Check -->
-                    <!-- Input Check -->
-    <p>
-      <input type="checkbox" id="test10" />
-      <label for="test10">Repair Broken Link</label>
-    </p>
-
-        <!-- End Input Check -->
-                    <!-- Input Check -->
-    <p>
-      <input type="checkbox" id="test11" />
-      <label for="test11">Repair Skipping Noise</label>
-    </p>
-
-        <!-- End Input Check -->
-        </div>
-    </li>
-                                     <li>
-      <div class="collapsible-header"><i class="material-icons">filter_drama</i>Seat</div>
-      <div class="collapsible-body">
-                    <!-- Input Check -->
-    <p>
-      <input type="checkbox" id="test13" />
-      <label for="test13">Repair Loose Seat</label>
-    </p>
-
-        <!-- End Input Check -->
-          <!-- Input Check -->
-    <p>
-      <input type="checkbox" id="test14" />
-      <label for="test14">Repair Torn Material</label>
-    </p>
-
-        <!-- End Input Check -->
-          </div>
-    </li>
-                                     <li>
-      <div class="collapsible-header"><i class="material-icons">filter_drama</i>Handlebar</div>
-      <div class="collapsible-body">
-                                                   <!-- Input Check -->
-    <p>
-      <input type="checkbox" id="test15" />
-      <label for="test15">Repair Loose Handlebar</label>
-    </p>
-
-        <!-- End Input Check -->          <!-- Input Check -->
-    <p>
-      <input type="checkbox" id="test17" />
-      <label for="test17">Repair Loose Grips</label>
-    </p>
-
-        <!-- End Input Check -->          <!-- Input Check -->
-    <p>
-      <input type="checkbox" id="test16" />
-      <label for="test16">Repair Brake Lever</label>
-    </p>
-
-        <!-- End Input Check -->
-                    <!-- Input Check -->
-    <p>
-      <input type="checkbox" id="test18" />
-      <label for="test18">Repair Gear Leaver</label>
-    </p>
-
-        <!-- End Input Check -->
-                                         </div>
-    </li>
-                                     <li>
-      <div class="collapsible-header"><i class="material-icons">filter_drama</i>Brakes (V-Shape)</div>
-      <div class="collapsible-body">          <!-- Input Check -->
-    <p>
-      <input type="checkbox" id="test19" />
-      <label for="test19">Repair Sloppy Brakes</label>
-    </p>
-
-        <!-- End Input Check -->
-          <!-- Input Check -->
-    <p>
-      <input type="checkbox" id="test20" />
-      <label for="test20">Repair Worn Pads</label>
-    </p>
-
-        <!-- End Input Check -->
-          <!-- Input Check -->
-    <p>
-      <input type="checkbox" id="test21" />
-      <label for="test21">Repair Retaining Spring</label>
-    </p>
-
-        <!-- End Input Check -->
-
-                                         </div>
-    </li>
-                        </li>
-                                     <li>
-      <div class="collapsible-header"><i class="material-icons">filter_drama</i>Brakes (Disc Brakes)</div>
-      <div class="collapsible-body">        <!-- Input Check -->
-    <p>
-      <input type="checkbox" id="test22" />
-      <label for="test22">Repair Sloppy Brakes</label>
-    </p>
-
-        <!-- End Input Check -->
-          <!-- Input Check -->
-    <p>
-      <input type="checkbox" id="test23" />
-      <label for="test23">Repair Worn Pads</label>
-    </p>
-
-        <!-- End Input Check -->
-          <!-- Input Check -->
-    <p>
-      <input type="checkbox" id="test24" />
-      <label for="test24">Repair Retaining Spring</label>
-    </p>
-
-        <!-- End Input Check -->
-
-                                         </div>
-    </li>
-                                     <li>
-      <div class="collapsible-header"><i class="material-icons">filter_drama</i>Suspension</div>
-      <div class="collapsible-body">
-                                 <!-- Input Check -->
-    <p>
-      <input type="checkbox" id="test25" />
-      <label for="test25">Repair Leaking Suspension</label>
-    </p>
-
-        <!-- End Input Check -->
-          <!-- Input Check -->
-    <p>
-      <input type="checkbox" id="test26" />
-      <label for="test26">Repair Rubber Seal</label>
-    </p>
-
-        <!-- End Input Check -->
 
 
 
-                                         </div>
-    </li>
-                                     <li>
-      <div class="collapsible-header"><i class="material-icons">filter_drama</i>Pedal</div>
-      <div class="collapsible-body">
-                                              <!-- Input Check -->
-    <p>
-      <input type="checkbox" id="test27" />
-      <label for="test27">Repair Cracked Pedel</label>
-    </p>
+        <!--Rewards-->
 
-        <!-- End Input Check -->
-          <!-- Input Check -->
-    <p>
-      <input type="checkbox" id="test28" />
-      <label for="test28">Replace Reflectors</label>
-    </p>
-
-        <!-- End Input Check -->
-          <!-- Input Check -->
-    <p>
-      <input type="checkbox" id="test24" />
-      <label for="test24">Repair Retaining Spring</label>
-    </p>
-
-        <!-- End Input Check -->
-
-                                         </div>
-    </li>
-  </ul>
-
-
-
-                        </div>
-                    </div>
-                    <div class="card-action">
-                        <a class="waves-effect waves-light blue btn-large"><i class="material-icons left">cloud</i>button</a>
-                        <a class="waves-effect waves-light blue btn-large"><i class="material-icons left">cloud</i>button</a>
-                    </div>
-                </div>
-            </div>
-
-
-
-             <!--Rewards-->
-
-            <div class="col s12 m6">
-                <div class="card hoverable">
-                    <div class="card-content">
-                        <span style="#fff;";class="card-title grey-text text-darken-4">
-                            Wicklow MTB Championship
+        <div class="col s12 m6">
+            <div class="card hoverable">
+                <div class="card-content">
+                    <span class="card-title grey-text text-darken-4">
+                         Punctre Repair
                         </span>
-                        <br>
-                        <img src="assets/img/calendar3.png"><b> October 23rd 2015 // Mount Leninster <br><br></b>
+                    </span>
+                    <br>
 
-                        <div class="col s10">
-                            <img style="margin-left:20%;" src="assets/img/mtbwklo.jpg"> <br><br>
-                            <p>This expert level track (re-designed in 2014) will test your absolute limit! take on the All-Ireland finalist on the wicklow mountain. with cash prized and sponserships available its the ultimite event for all budding professional riders.<br><br><b> Proressional level riders only.</b> </p></div>
-                    </div>
-                    <div class="card-action">
-                        <button class="btn waves-effect waves-light blue darken-2" name="action"
-                        type="submit">Attend<i class=
-                        "material-icons right">grade</i></button>
-                         <button class="btn waves-effect waves-dark grey darken-1 darken-2" name="send"
-                        type="submit">Send To Friend<i class=
-                        "material-icons right">grade</i></button>
+                    <div class="col s10">
+                        <img style="margin-left:20%;" src="assets/img/icon00002.png">
+                        <br>
+                        <br>
+                        <p>Punctured tires seem to be an inevitable part of bicycling. Experienced cyclists make a habit of carrying the necessary repair materials on their bike at all times. With a little preparation you'll never need to worry about being stranded. Want even more safety and peace of mind on the road? Practice this repair at home.</p>
+                        <br>
+
+                        <p> <b>Things You Will Need: </b>
+                            <br>
+                            <br>
+                            <i> Parts can be purchased below, or you can book it into your local repair store</i>
+                            <br>
+                            <br> - Replacement Inner Tube
+                            <br> - Tire Pump
+                            <br> - Set Of Three Tire Tools (tire Irons)
+                            <br> - Tire patch kit (rubber patches, glue, sandpaper)
+                            <br>
+                            <br>
+                            <br>
+
+
+                            <p>
+
+                                1. Remove the wheel from the bike. Most bikes now have a quick-release lever on each axle. Simply flip one of the levers to loosen the wheel. Once loose, the wheel can be pulled free.
+                                <br>
+                                <br> 2. Older bikes usually have two axle nuts holding each wheel in place. Use an adjustable wrench to loosen one of the nuts, thus allowing the wheel to come free. Completely deflate the tire.
+                                <br>
+                                <br> 3. Slide the rounded end of one of the tire tools between the tire and the rim. Working slowly and taking care not to pinch the tube, pry the tire away from the rim by locking the free end of the tire tool into the spokes.
+                                <br>
+                                <br> 4. Slide a second tire tool between the tire and rim. Work this tool around the rim until the tire pops free (see A).
+                                <br>
+                                <br> 5. If the tool gets stuck, lock the free end into the spokes and begin working with the third tire tool.
+                                <br>
+                                <br> 6. Remove the tire and inner tube from the rim.
+                                <br>
+                                <br>
+
+                                <img src="assets/img/tut/1.jpg">
+                                <br>
+                                <br> 7. Inspect the inner tube for holes by inflating it with a bicycle-tire pump until you can hear air escaping. Many holes are not visible until the tube is highly pressurized.
+                                <br>
+                                <br> 8. Locate the hole. Hold the tube close to your cheek and feel for escaping air if necessary (see A). Lightly rough up the area around the hole with sandpaper.
+                                <br>
+                                <br>
+
+                                <img src="assets/img/tut/2.jpg">
+                                <br>
+                                <br> 9. Apply glue both to the tube and a rubber patch. Wait for the glue to become tacky before applying the patch.
+                                <br>
+                                <br> 10. Firmly press the patch onto the hole (see B) and allow it to dry for several minutes.
+                                <br>
+                                <br>
+
+                                <img src="assets/img/tut/fix-punctured-bicycle-1.5-800x800.jpg">
+                                <br>
+                                <br> 11. Check the tire to fine the source of the puncture by running your fingers around the inside of the tire. Be careful, sharp objects may be imbedded in the tire. Visually inspect the outside of the tire for rips, tears or sharp objects. Be sure to remove the offending object so you don't get another flat!
+                                <br>
+                                <br> 12. Take a new tire and slip one edge of it all the way around the rim. It should be possible to do this by hand, although you can use one of the tire tools if necessary.
+                                <br>
+                                <br> 13. Place the inner tube completely inside the new tire, taking care to line up the inner tube valve with the valve hole in the rim (see B). Push the tube as far into the tire as possible. It might help to inflate the tube very slightly.
+                                <br>
+                                <br>
+
+                                <img src="assets/img/tut/change-bicycle-tire-2.2-800x800.jpg">
+                                <br>
+                                <br> 14. Using your hands, push as much of the second edge of the tire onto the rim as possible. Continue pushing the tube into the tire as needed.
+                                <br>
+                                <br> 15. Insert a tire tool between the rim and the portion of the tire that is not yet installed.
+                                <br>
+                                <br> 16. Slowly lever the tool upward and force the tire over the rim edge. Use a second tool to push the tube into place if necessary.
+                                <br>
+                                <br> 17. Gently roll the tire into place over the rim edge. Work slowly and avoid snapping the tire into place as this tends to pinch the tube and cause air leaks.
+                                <br>
+                                <br> 18. Inflate the tire to the recommended pressure written on the side of the tire, and replace the wheel on the bike.
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+
+                                <b>Tips & Warnings</b>
+                                <br>
+                                <br> There are two types of valves used on bicycle inner tubes: Schrader valves and Presta valves. Schrader valves are identical to the type used on car tires and can be inflated at most gas stations. Presta valves are smaller and lighter and require a special pump.
+
+
+
+                            </p>
+
+
+                        </p>
+
+
+
                     </div>
                 </div>
-            </div>
-
-                     <!--Rewards-->
-
-            <div class="col s12 m6">
-                <div class="card hoverable">
-                    <div class="card-content">
-                        <span class="card-title grey-text text-darken-4">
-                            Wicklow MTB Championship
-                        </span>
-                        <br>
-                        <img src="assets/img/calendar4.png"><b> November 8th 2015 // Mount Leninster <br><br></b>
-
-                        <div class="col s10">
-                            <img style="margin-left:20%;" src="assets/img/ndhc.jpg"> <br><br>
-                            <p>The ultimate of MTB events. The irish downhill champions event will ruthlessly eliminate the competition. guaranteed to be a big event and to get your adrenaline going. featuring irelands greatest MTB heros battling it out for the championships. Sponsored by NukeProof.</b> </p></div>
-                    </div>
-                    <div class="card-action">
-                        <button class="btn waves-effect waves-light blue darken-2" name="action"
-                        type="submit">Attend<i class=
-                        "material-icons right">grade</i></button>
-                         <button class="btn waves-effect waves-dark grey darken-1 darken-2" name="send"
-                        type="submit">Send To Friend<i class=
-                        "material-icons right">grade</i></button>
-                    </div>
+                <div class="card-action">
+                    <button class="btn waves-effect waves-light blue darken-2" name="action" type="submit">Buy Parts<i class="material-icons right">grade</i></button>
+                    <button class="btn waves-effect waves-dark red darken-1 darken-2" name="send" type="submit">Book to repair<i class="material-icons right">grade</i></button>
                 </div>
             </div>
+        </div>
 
-
-
+        <!--Rewards
         </div>
         <!--Rewards End-->
     </div>
@@ -422,10 +487,11 @@
     </script>
     <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
-        <script>
-$( document ).ready(function() {
-$('.button-collapse').sideNav();
-});
+    <script>
+        $(document).ready(function () {
+            $('.button-collapse').sideNav();
+        });
     </script>
 </body>
+
 </html>
