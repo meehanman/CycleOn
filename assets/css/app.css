@@ -48,6 +48,8 @@ bikeHead {
 }
 superpod {
     color: white;
-    padding-top: 30px;
-    margin-top: 40px;
+    background-color:orange;
+    border-radius:50px;
+    height:30px;
+    display:none;
 }
