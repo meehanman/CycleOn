@@ -12,6 +12,16 @@
     </script>
     <link rel="stylesheet" href="assets/css/app.css" type="text/css">
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        .card .card-action a{
+             color:#fff;
+        }
+        
+          .card .card-action a:hover{
+             color:lightgrey;
+        }
+        
+    </style>
 </head>
 <body ng-app="rewardsapp" class="bg">
     <!--Menu-->
@@ -58,22 +68,14 @@
                 <div class="card hoverable">
                     <div class="card-content">
                         <span class="card-title grey-text text-darken-4">
-                          Please Select Problem Area
+                          Please Select Problem Area:
                         </span>
-                        <br> 
+                        <br> <br>
                         
                         <div class="col s10">
-                            <img style="margin-left:20%;" src="assets/img/marathon_champs_poster.jpg"> <br><br> 
-                            <p>Get your adrenaline running for the annual Rostrever MTB challenge. With 40 spaces available there soon to fill up fast! <br><br>Note: Protective gear must be worn. </p></div>
+                            <img style="margin-left:5%;" src="assets/img/FixItBike.png"> </div>
                     </div>
-                    <div class="card-action">
-                        <button class="btn waves-effect waves-light blue darken-2" name="action"
-                        type="submit">Attend<i class=
-                        "material-icons right">grade</i></button>
-                         <button class="btn waves-effect waves-dark grey darken-1 darken-2" name="send"
-                        type="submit">Send To Friend<i class=
-                        "material-icons right">grade</i></button>
-                    </div>
+                 
                 </div>
             </div>        
             
@@ -333,12 +335,8 @@
                         </div>
                     </div>
                     <div class="card-action">
-                        <button class="btn waves-effect waves-light blue darken-2" name="action"
-                        type="submit">Attend<i class=
-                        "material-icons right">grade</i></button>
-                         <button class="btn waves-effect waves-dark grey darken-1 darken-2" name="send"
-                        type="submit">Send To Friend<i class=
-                        "material-icons right">grade</i></button>
+                        <a class="waves-effect waves-light blue btn-large"><i class="material-icons left">cloud</i>button</a>
+                        <a class="waves-effect waves-light blue btn-large"><i class="material-icons left">cloud</i>button</a>
                     </div>
                 </div>
             </div>        
@@ -350,7 +348,7 @@
             <div class="col s12 m6">
                 <div class="card hoverable">
                     <div class="card-content">
-                        <span class="card-title grey-text text-darken-4">
+                        <span style="#fff;";class="card-title grey-text text-darken-4">
                             Wicklow MTB Championship
                         </span>
                         <br> 
