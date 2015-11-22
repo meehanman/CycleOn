@@ -11,8 +11,6 @@
 
     <!-- Compiled and minified CSS -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js">
-
-
     </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
 
@@ -20,22 +18,22 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
-<body ng-app="cycleapp">
+<body ng-app="cycleapp" style="background-color:#DAE7F1;">
     <nav>
         <div id="profile" ng-controller="AccountController">
             <ul>
-            
 
-                
-                
+
+
+
                 <img class="titleImage" style="float:right;margin-right:115px;margin-top:3px;padding-right:30px;" src="assets/img/170whilwithguy.png" />
-                
-                 <img style="float:right;margin-right:-265px;margin-top:11px;" src="assets/img/shoppingcartwhite2%20copy.png" />
-                
-           
-                              
-                
-                
+
+                <img style="float:right;margin-right:-265px;margin-top:11px;" src="assets/img/shoppingcartwhite2%20copy.png" />
+
+
+
+
+
             </ul>
             <ul id="slide-out" class="side-nav">
 
@@ -64,46 +62,55 @@
 
     <div class="profile" ng-controller="AccountController">
         <deanPoints>You have <b>{{credit}}</b> reward points!</deanPoints>
-        <bikeHead>
-            <superpod>Reciept</superpod>
-            <superpod>Upgrade</superpod>
-            <bikenametitle>Carrera Vulcan Mens Mountain Bike 2015</bikenametitle>
-            <biketyle>Mountain Bike</biketyle>
-        </bikeHead>
+        <h5 style="padding-left:20px;padding-top:40px;">Your Bikes</h5>
+        <mk-bikeInfo>
+            <div class="image">
+                <img style="width:100%;" src="assets/img/Img1.png" />
+                <div style="position: absolute; top: 140px; left: 0; width: 100%;">
+                    <bikenametitle style="padding-left:20px;">Carrera Vulcan Mens Mountain Bike 2015</bikenametitle>
+                    <biketype style="padding-left:20px;">Mountain Bike</biketype>
+
+                </div>
+            </div>
+            <img id="swipe" style="width:100%;margin-top:-7px;" src="assets/img/Img2.png" />
+            <img style="width:100%;margin-top:-7px;" src="assets/img/Img3.png" />
 
     </div>
-    <footer class="blue">
+    <div class="row" style="margin-top:-40px; z-index:0;">
+        <a class="waves-effect waves-light btn">View Reciept</a><a style="margin-left:5px;" class="waves-effect waves-light btn">Shop for Accessories</a>
+    </div>
+    <br>
+    <br>
+    <footer style="z-index:30230023;">
         <a class="app-but-buttons waves-effect waves-light btn-large col s6" style="width:49%;background-color:white;color:#00B4FF;" href="fixit.html">Fit It</a>
-        <a class="app-but-buttons waves-effect waves-light btn-large col s6" style="width:49%;background-color:white;color:#00B4FF;" href="events.html">Events</a> </footer>
+        <a class="app-but-buttons waves-effect waves-light btn-large col s6 right" style="width:49%;background-color:white;color:#00B4FF;" href="events.html">Events</a> </footer>
 
 
     <!-- Compiled and minified JavaScript -->
 
     <script src="assets/js/app.js">
-
-
     </script>
     <script src="assets/js/Controllers/RewardsController.js">
-
-
     </script>
     <script src="assets/js/Controllers/AccountController.js">
-
-
     </script>
     <script src="assets/js/Controllers/NavController.js">
-
-
     </script>
     <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
-
+    <script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js'></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
     <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
             $('.button-collapse').sideNav();
             $('deanPoints').slideDown();
-        });
 
+            $('#swipe').click(function () {
+                    $('#swipe').animate({
+                        marginLeft: 300px
+                    });
+                };
+            });
+        });
     </script>
 
 </body>

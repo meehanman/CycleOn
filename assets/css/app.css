@@ -3,6 +3,7 @@
 nav {
     background-color: #00B4FF;
 }
+
 deanPoints {
     float: right;
     padding: 0px 5px;
@@ -11,45 +12,55 @@ deanPoints {
     background-color: white;
     color: #00B4FF;
 }
+
 bikeHead {
-    background-color: #44B4FF;
-    height: 500px;
+    color: #000;
     width: 100%;
     display: block;
     margin-right: -100px;
 }
+
 app-but-buttons {
     width: 50%;
     background-color: white;
 }
-blue {
-    background-color: #00B4FF;
-}
+
 .faceimage {
     border-radius: 50px/50px;
 }
+
 #name {
     padding-left: 10px;
 }
+
 nav > ul > img {
     height: 50px;
     position: relative;
     float: right;
     padding-right: 20px;
 }
+
 bikenametitle {
-    color: white;
+    color: #44B4FF;
     display: block;
-    padding-top: 50px;
+    padding-top: 20px;
     font-size: 20px;
 }
-bikeHead {
-    padding-left: 20px;
-}
+
 superpod {
     color: white;
-    background-color:orange;
-    border-radius:50px;
-    height:30px;
-    display:none;
+    background-color: orange;
+    border-radius: 50px;
+    height: q0px;
+    display: none;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+mk-bikeInfo {
+    width: 100%;
 }
