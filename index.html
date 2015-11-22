@@ -19,20 +19,12 @@
 </head>
 
 <body ng-app="cycleapp" style="background-color:#14A3DE;">
-    <nav>
+  <nav>
         <div id="profile" ng-controller="AccountController">
             <ul>
 
-
-
-
-                <img class="titleImage" style="float:right;margin-right:115px;margin-top:3px;padding-right:30px;" src="assets/img/170whilwithguy.png" />
-
-                <img style="float:right;margin-right:-265px;margin-top:11px;" src="assets/img/shoppingcartwhite2%20copy.png" />
-
-
-
-
+                <img class="titleImage" style="float:right;margin-right:130px;margin-top:3px;margin-bottom:3px;height:50px;padding-right:30px;" src="assets/img/170whilwithguy.png"/>
+                <img style="float:right;margin-right:-280px;margin-top:11px;" src="assets/img/shoppingcartwhite2%20copy.png" />
 
             </ul>
             <ul id="slide-out" class="side-nav">
@@ -53,7 +45,7 @@
                 <br>
                 <hr>
                 <li><a href="#!">My Account</a></li>
-                <li><a href="#!">Logout</a></li>
+                <li><a href="login.html">Logout</a></li>
 
             </ul>
             <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
@@ -88,17 +80,13 @@
 
     <!-- Compiled and minified JavaScript -->
 
-    <script src="assets/js/app.js">
-    </script>
-    <script src="assets/js/Controllers/RewardsController.js">
-    </script>
-    <script src="assets/js/Controllers/AccountController.js">
-    </script>
-    <script src="assets/js/Controllers/NavController.js">
-    </script>
+    <script src="assets/js/app.js"></script>
     <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
     <script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js'></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+    <script src="assets/js/Controllers/RewardsController.js"></script>
+    <script src="assets/js/Controllers/AccountController.js"></script>
+    <script src="assets/js/Controllers/NavController.js"></script>
     <script>
         $(document).ready(function () {
             $('.button-collapse').sideNav();

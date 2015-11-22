@@ -15,42 +15,44 @@
 </head>
 <body ng-app="cycleapp" class="bg">
     <!--Menu-->
-    
-        <nav>
-            <div id="profile" ng-controller="AccountController">
-        <ul>
-            <img src="assets/img/170whilwithguy.png" />
-        </ul>
-        <ul id="slide-out" class="side-nav">
+     <nav>
+        <div id="profile" ng-controller="AccountController">
+            <ul>
 
-            <li>
+                <img class="titleImage" style="float:right;margin-right:130px;margin-top:3px;margin-bottom:3px;height:50px;padding-right:30px;" src="assets/img/170whilwithguy.png"/>
+                <img style="float:right;margin-right:-280px;margin-top:11px;" src="assets/img/shoppingcartwhite2%20copy.png" />
 
-                <p style="color:black;line-height: 16px;"><img class="faceimage" align="center" src="http://lorempixel.com/70/70/"> <b id="name">{{name}}</b>
-                    <br> </p>
-            </li>
-            <hr>
-            <div id="nav" ng-controller="NavController">
-                <div ng-repeat="link in links">
-                    <li><a ng-href="{{link.url}}">{{link.title}}</a></li>
+            </ul>
+            <ul id="slide-out" class="side-nav">
+
+                <li>
+
+                    <p style="color:black;line-height: 16px;"><img class="faceimage" align="center" src="http://lorempixel.com/70/70/"> <b id="name">{{name}}</b>
+                        <br> </p>
+                </li>
+                <hr>
+                <div id="nav" ng-controller="NavController">
+                    <div ng-repeat="link in links">
+                        <li><a ng-href="{{link.url}}">{{link.title}}</a></li>
+                    </div>
                 </div>
-            </div>
-            <br>
+                <br>
 
-            <br>
-            <hr>
-            <li><a href="account.html">My Account</a></li>
-            <li><a href="login.html">Logout</a></li>
+                <br>
+                <hr>
+                <li><a href="#!">My Account</a></li>
+                <li><a href="login.html">Logout</a></li>
 
-        </ul>
-        <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
-            </div>
+            </ul>
+            <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+        </div>
     </nav>
 
     <!--Menu End-->
-    
+
     <!--Main Content-->
-        
-        
+
+
         <!--Header-->
     <div class="profile" ng-controller="AccountController">
         <div id="header">
@@ -66,7 +68,7 @@
         </div>
         </div>
         <!--Header End-->
-<div class="main" ng-controller="RewardsController">  
+<div class="main" ng-controller="RewardsController">
         <!--Rewards-->
         <div ng-repeat="reward in rewards">
             <div class="col s12 m6">
@@ -90,12 +92,12 @@
                         "material-icons right">grade</i></button>
                     </div>
                 </div>
-            </div>        
+            </div>
         </div>
         <!--Rewards End-->
     </div>
     <!--Main Content End-->
-    
+
     <script src="assets/js/app.js">
     </script>
     <script src="assets/js/Controllers/RewardsController.js">

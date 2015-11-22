@@ -6,11 +6,11 @@ app.controller('NavController',['$scope', function($scope) {
         },
         {
             title: "Fix It",
-            url: ""
+            url: "fitit.html"
         },
         {
             title: "Shop",
-            url: ""
+            url: "shop.html"
         },
         {
             title: "Events",

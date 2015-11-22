@@ -16,38 +16,52 @@
         .card .card-action a{
              color:#fff;
         }
-        
+
           .card .card-action a:hover{
              color:lightgrey;
         }
-        
+
     </style>
 </head>
 <body ng-app="rewardsapp" class="bg">
     <!--Menu-->
-        <nav>
-        <ul class="right hide-on-med-and-down">
-            <li><a href="#!">First Sidebar Link</a></li>
-            <li><a href="#!">Second Sidebar Link</a></li>
-        </ul>
-        <ul id="slide-out" class="side-nav">
-             <li>
-                  
-     <p style="color:black;line-height: 16px;"><img style="border-radius: 50px/50px;" align="center" src="http://lorempixel.com/70/70/"> <b>Anabelle Smith</b> <br>   </p></li>
-            <hr>
-            <li><a href="#!">Home</a></li>
-            <li><a href="#!">Fix It</a></li>
-            <li><a href="#!">Shop</a></li>
-            <li><a href="#!">Events</a></li>
-            
-        </ul>
-        <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+ <nav>
+        <div id="profile" ng-controller="AccountController">
+            <ul>
+
+                <img class="titleImage" style="float:right;margin-right:130px;margin-top:3px;margin-bottom:3px;height:50px;padding-right:30px;" src="assets/img/170whilwithguy.png"/>
+                <img style="float:right;margin-right:-280px;margin-top:11px;" src="assets/img/shoppingcartwhite2%20copy.png" />
+
+            </ul>
+            <ul id="slide-out" class="side-nav">
+
+                <li>
+
+                    <p style="color:black;line-height: 16px;"><img class="faceimage" align="center" src="http://lorempixel.com/70/70/"> <b id="name">{{name}}</b>
+                        <br> </p>
+                </li>
+                <hr>
+                <div id="nav" ng-controller="NavController">
+                    <div ng-repeat="link in links">
+                        <li><a ng-href="{{link.url}}">{{link.title}}</a></li>
+                    </div>
+                </div>
+                <br>
+
+                <br>
+                <hr>
+                <li><a href="#!">My Account</a></li>
+                <li><a href="login.html">Logout</a></li>
+
+            </ul>
+            <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+        </div>
     </nav>
     <!--Menu End-->
-    
+
     <!--Main Content-->
     <div class="main" ng-controller="RewardsController">
-        
+
         <!--Header-->
         <div id="header">
             <div class="content">
@@ -61,9 +75,9 @@
                 </div>
         </div>
         <!--Header End-->
-                    
+
         <!--Rewards-->
-     
+
             <div class="col s12 m6">
                 <div class="card hoverable">
                     <div class="card-content">
@@ -71,22 +85,22 @@
                           Please Select Problem Area:
                         </span>
                         <br> <br>
-                        
+
                         <div class="col s10">
                             <img style="margin-left:5%;" src="assets/img/FixItBike.png"> </div>
                     </div>
-                 
+
                 </div>
-            </div>        
-            
+            </div>
+
             <div class="col s12 m6">
                 <div class="card hoverable">
                     <div class="card-content">
-                       
-                        <br> 
-                      
+
+                        <br>
+
                         <div class="col s10">
-                         
+
                                  <ul class="collapsible" data-collapsible="accordion">
     <li>
       <div class="collapsible-header"><i class="material-icons">filter_drama</i>Wheels</div>
@@ -96,31 +110,31 @@
       <input type="checkbox" id="test1" />
       <label for="test1">Repair Bent Spokes</label>
     </p>
-          
+
         <!-- End Input Check -->
                     <!-- Input Check -->
     <p>
       <input type="checkbox" id="test2" />
       <label for="test2">Repair Buckled Wheel</label>
     </p>
-          
+
         <!-- End Input Check -->
                     <!-- Input Check -->
     <p>
       <input type="checkbox" id="test3" />
       <label for="test3">Repair Wheel Bearing</label>
     </p>
-          
+
         <!-- End Input Check -->
                     <!-- Input Check -->
     <p>
       <input type="checkbox" id="test4" />
       <label for="test4">Repair Loose Reflectors</label>
     </p>
-          
+
         <!-- End Input Check -->
 
-   
+
 
         </div>
     </li>
@@ -132,22 +146,22 @@
       <input type="checkbox" id="test6" />
       <label for="test6">Repair Puncture</label>
     </p>
-          
+
         <!-- End Input Check -->
                     <!-- Input Check -->
     <p>
       <input type="checkbox" id="test7" />
       <label for="test7">Repair Ripped Tyre</label>
     </p>
-          
+
         <!-- End Input Check -->
                     <!-- Input Check -->
     <p>
       <input type="checkbox" id="test8" />
       <label for="test8">Repair Valve</label>
     </p>
-          
-      
+
+
         </div>
     </li>
     <li>
@@ -158,21 +172,21 @@
       <input type="checkbox" id="test99" />
       <label for="test99">Repair Slipped Chain (Fallen Off)</label>
     </p>
-          
+
         <!-- End Input Check -->
                     <!-- Input Check -->
     <p>
       <input type="checkbox" id="test10" />
       <label for="test10">Repair Broken Link</label>
     </p>
-          
+
         <!-- End Input Check -->
                     <!-- Input Check -->
     <p>
       <input type="checkbox" id="test11" />
       <label for="test11">Repair Skipping Noise</label>
     </p>
-          
+
         <!-- End Input Check -->
         </div>
     </li>
@@ -184,14 +198,14 @@
       <input type="checkbox" id="test13" />
       <label for="test13">Repair Loose Seat</label>
     </p>
-          
+
         <!-- End Input Check -->
           <!-- Input Check -->
     <p>
       <input type="checkbox" id="test14" />
       <label for="test14">Repair Torn Material</label>
     </p>
-          
+
         <!-- End Input Check -->
           </div>
     </li>
@@ -203,26 +217,26 @@
       <input type="checkbox" id="test15" />
       <label for="test15">Repair Loose Handlebar</label>
     </p>
-          
+
         <!-- End Input Check -->          <!-- Input Check -->
     <p>
       <input type="checkbox" id="test17" />
       <label for="test17">Repair Loose Grips</label>
     </p>
-          
+
         <!-- End Input Check -->          <!-- Input Check -->
     <p>
       <input type="checkbox" id="test16" />
       <label for="test16">Repair Brake Lever</label>
     </p>
-          
+
         <!-- End Input Check -->
                     <!-- Input Check -->
     <p>
       <input type="checkbox" id="test18" />
       <label for="test18">Repair Gear Leaver</label>
     </p>
-          
+
         <!-- End Input Check -->
                                          </div>
     </li>
@@ -233,23 +247,23 @@
       <input type="checkbox" id="test19" />
       <label for="test19">Repair Sloppy Brakes</label>
     </p>
-          
+
         <!-- End Input Check -->
           <!-- Input Check -->
     <p>
       <input type="checkbox" id="test20" />
       <label for="test20">Repair Worn Pads</label>
     </p>
-          
+
         <!-- End Input Check -->
           <!-- Input Check -->
     <p>
       <input type="checkbox" id="test21" />
       <label for="test21">Repair Retaining Spring</label>
     </p>
-          
+
         <!-- End Input Check -->
-                                         
+
                                          </div>
     </li>
                         </li>
@@ -260,23 +274,23 @@
       <input type="checkbox" id="test22" />
       <label for="test22">Repair Sloppy Brakes</label>
     </p>
-          
+
         <!-- End Input Check -->
           <!-- Input Check -->
     <p>
       <input type="checkbox" id="test23" />
       <label for="test23">Repair Worn Pads</label>
     </p>
-          
+
         <!-- End Input Check -->
           <!-- Input Check -->
     <p>
       <input type="checkbox" id="test24" />
       <label for="test24">Repair Retaining Spring</label>
     </p>
-          
+
         <!-- End Input Check -->
-                                         
+
                                          </div>
     </li>
                                      <li>
@@ -287,17 +301,17 @@
       <input type="checkbox" id="test25" />
       <label for="test25">Repair Leaking Suspension</label>
     </p>
-          
+
         <!-- End Input Check -->
           <!-- Input Check -->
     <p>
       <input type="checkbox" id="test26" />
       <label for="test26">Repair Rubber Seal</label>
     </p>
-          
+
         <!-- End Input Check -->
-         
-                                                                                           
+
+
 
                                          </div>
     </li>
@@ -309,29 +323,29 @@
       <input type="checkbox" id="test27" />
       <label for="test27">Repair Cracked Pedel</label>
     </p>
-          
+
         <!-- End Input Check -->
           <!-- Input Check -->
     <p>
       <input type="checkbox" id="test28" />
       <label for="test28">Replace Reflectors</label>
     </p>
-          
+
         <!-- End Input Check -->
           <!-- Input Check -->
     <p>
       <input type="checkbox" id="test24" />
       <label for="test24">Repair Retaining Spring</label>
     </p>
-          
+
         <!-- End Input Check -->
-                                     
+
                                          </div>
     </li>
   </ul>
-        
-                        
-                        
+
+
+
                         </div>
                     </div>
                     <div class="card-action">
@@ -339,23 +353,23 @@
                         <a class="waves-effect waves-light blue btn-large"><i class="material-icons left">cloud</i>button</a>
                     </div>
                 </div>
-            </div>        
-            
-            
-            
+            </div>
+
+
+
              <!--Rewards-->
-     
+
             <div class="col s12 m6">
                 <div class="card hoverable">
                     <div class="card-content">
                         <span style="#fff;";class="card-title grey-text text-darken-4">
                             Wicklow MTB Championship
                         </span>
-                        <br> 
+                        <br>
                         <img src="assets/img/calendar3.png"><b> October 23rd 2015 // Mount Leninster <br><br></b>
-                        
+
                         <div class="col s10">
-                            <img style="margin-left:20%;" src="assets/img/mtbwklo.jpg"> <br><br> 
+                            <img style="margin-left:20%;" src="assets/img/mtbwklo.jpg"> <br><br>
                             <p>This expert level track (re-designed in 2014) will test your absolute limit! take on the All-Ireland finalist on the wicklow mountain. with cash prized and sponserships available its the ultimite event for all budding professional riders.<br><br><b> Proressional level riders only.</b> </p></div>
                     </div>
                     <div class="card-action">
@@ -367,21 +381,21 @@
                         "material-icons right">grade</i></button>
                     </div>
                 </div>
-            </div>        
-            
+            </div>
+
                      <!--Rewards-->
-     
+
             <div class="col s12 m6">
                 <div class="card hoverable">
                     <div class="card-content">
                         <span class="card-title grey-text text-darken-4">
                             Wicklow MTB Championship
                         </span>
-                        <br> 
+                        <br>
                         <img src="assets/img/calendar4.png"><b> November 8th 2015 // Mount Leninster <br><br></b>
-                        
+
                         <div class="col s10">
-                            <img style="margin-left:20%;" src="assets/img/ndhc.jpg"> <br><br> 
+                            <img style="margin-left:20%;" src="assets/img/ndhc.jpg"> <br><br>
                             <p>The ultimate of MTB events. The irish downhill champions event will ruthlessly eliminate the competition. guaranteed to be a big event and to get your adrenaline going. featuring irelands greatest MTB heros battling it out for the championships. Sponsored by NukeProof.</b> </p></div>
                     </div>
                     <div class="card-action">
@@ -393,15 +407,15 @@
                         "material-icons right">grade</i></button>
                     </div>
                 </div>
-            </div>        
-            
-            
-         
+            </div>
+
+
+
         </div>
         <!--Rewards End-->
     </div>
     <!--Main Content End-->
-    
+
     <script src="assets/js/app.js">
     </script>
     <script src="assets/js/Controllers/RewardsController.js">

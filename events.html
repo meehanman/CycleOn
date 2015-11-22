@@ -13,31 +13,46 @@
     <link rel="stylesheet" href="assets/css/app.css" type="text/css">
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
-<body ng-app="rewardsapp" class="bg">
+<body ng-app="cycleapp" class="bg">
     <!--Menu-->
-        <nav>
-        <ul class="right hide-on-med-and-down">
-            <li><a href="#!">First Sidebar Link</a></li>
-            <li><a href="#!">Second Sidebar Link</a></li>
-        </ul>
-        <ul id="slide-out" class="side-nav">
-             <li>
-                  
-     <p style="color:black;line-height: 16px;"><img style="border-radius: 50px/50px;" align="center" src="http://lorempixel.com/70/70/"> <b>Anabelle Smith</b> <br>   </p></li>
-            <hr>
-            <li><a href="#!">Home</a></li>
-            <li><a href="#!">Fix It</a></li>
-            <li><a href="#!">Shop</a></li>
-            <li><a href="#!">Events</a></li>
-            
-        </ul>
-        <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+  <nav>
+        <div id="profile" ng-controller="AccountController">
+            <ul>
+
+                <img class="titleImage" style="float:right;margin-right:130px;margin-top:3px;margin-bottom:3px;height:50px;padding-right:30px;" src="assets/img/170whilwithguy.png" />
+
+                <img style="float:right;margin-right:-280px;margin-top:11px;" src="assets/img/shoppingcartwhite2%20copy.png" />
+
+            </ul>
+            <ul id="slide-out" class="side-nav">
+
+                <li>
+
+                    <p style="color:black;line-height: 16px;"><img class="faceimage" align="center" src="http://lorempixel.com/70/70/"> <b id="name">{{name}}</b>
+                        <br> </p>
+                </li>
+                <hr>
+                <div id="nav" ng-controller="NavController">
+                    <div ng-repeat="link in links">
+                        <li><a ng-href="{{link.url}}">{{link.title}}</a></li>
+                    </div>
+                </div>
+                <br>
+
+                <br>
+                <hr>
+                <li><a href="#!">My Account</a></li>
+                <li><a href="login.html">Logout</a></li>
+
+            </ul>
+            <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+        </div>
     </nav>
     <!--Menu End-->
-    
+
     <!--Main Content-->
     <div class="main" ng-controller="RewardsController">
-        
+
         <!--Header-->
         <div id="header">
             <div class="content">
@@ -51,20 +66,20 @@
                 </div>
         </div>
         <!--Header End-->
-                    
+
         <!--Rewards-->
-     
+
             <div class="col s12 m6">
                 <div class="card hoverable">
                     <div class="card-content">
                         <span class="card-title grey-text text-darken-4">
                             Rostrevor Pro MTB 2015
                         </span>
-                        <br> 
+                        <br>
                         <img src="assets/img/calendar1.png"><b> August 12th 2015 // Rostrevor Trial <br><br></b>
-                        
+
                         <div class="col s10">
-                            <img style="margin-left:20%;" src="assets/img/marathon_champs_poster.jpg"> <br><br> 
+                            <img style="margin-left:20%;" src="assets/img/marathon_champs_poster.jpg"> <br><br>
                             <p>Get your adrenaline running for the annual Rostrever MTB challenge. With 40 spaces available there soon to fill up fast! <br><br>Note: Protective gear must be worn. </p></div>
                     </div>
                     <div class="card-action">
@@ -76,20 +91,20 @@
                         "material-icons right">grade</i></button>
                     </div>
                 </div>
-            </div>        
-            
+            </div>
+
             <div class="col s12 m6">
                 <div class="card hoverable">
                     <div class="card-content">
                         <span class="card-title grey-text text-darken-4">
                             Red Bull Fox Hunt
                         </span>
-                        <br> 
+                        <br>
                         <img src="assets/img/calendar2.png"><b> September 5th 2015 // Rostrevor Trial <br><br></b>
-                        
+
                         <div class="col s10">
-                            <img style="margin-left:20%;" src="assets/img/rbfh.png"> <br><br> 
-                            <p>Red Bull Foxhunt with Jeep returned to the UK this September, where the Pentland Hills in Edinburgh once again hosted the women-only edition of this innovative race. 
+                            <img style="margin-left:20%;" src="assets/img/rbfh.png"> <br><br>
+                            <p>Red Bull Foxhunt with Jeep returned to the UK this September, where the Pentland Hills in Edinburgh once again hosted the women-only edition of this innovative race.
 Over 100 competitors played the part of "the hounds" as they tried to outride the best downhill racer in the world, "the fox", Rachel Atherton. </p></div>
                     </div>
                     <div class="card-action">
@@ -101,23 +116,23 @@ Over 100 competitors played the part of "the hounds" as they tried to outride th
                         "material-icons right">grade</i></button>
                     </div>
                 </div>
-            </div>        
-            
-            
-            
+            </div>
+
+
+
              <!--Rewards-->
-     
+
             <div class="col s12 m6">
                 <div class="card hoverable">
                     <div class="card-content">
                         <span class="card-title grey-text text-darken-4">
                             Wicklow MTB Championship
                         </span>
-                        <br> 
+                        <br>
                         <img src="assets/img/calendar3.png"><b> October 23rd 2015 // Mount Leninster <br><br></b>
-                        
+
                         <div class="col s10">
-                            <img style="margin-left:20%;" src="assets/img/mtbwklo.jpg"> <br><br> 
+                            <img style="margin-left:20%;" src="assets/img/mtbwklo.jpg"> <br><br>
                             <p>This expert level track (re-designed in 2014) will test your absolute limit! take on the All-Ireland finalist on the wicklow mountain. with cash prized and sponserships available its the ultimite event for all budding professional riders.<br><br><b> Proressional level riders only.</b> </p></div>
                     </div>
                     <div class="card-action">
@@ -129,21 +144,21 @@ Over 100 competitors played the part of "the hounds" as they tried to outride th
                         "material-icons right">grade</i></button>
                     </div>
                 </div>
-            </div>        
-            
+            </div>
+
                      <!--Rewards-->
-     
+
             <div class="col s12 m6">
                 <div class="card hoverable">
                     <div class="card-content">
                         <span class="card-title grey-text text-darken-4">
                             Wicklow MTB Championship
                         </span>
-                        <br> 
+                        <br>
                         <img src="assets/img/calendar4.png"><b> November 8th 2015 // Mount Leninster <br><br></b>
-                        
+
                         <div class="col s10">
-                            <img style="margin-left:20%;" src="assets/img/ndhc.jpg"> <br><br> 
+                            <img style="margin-left:20%;" src="assets/img/ndhc.jpg"> <br><br>
                             <p>The ultimate of MTB events. The irish downhill champions event will ruthlessly eliminate the competition. guaranteed to be a big event and to get your adrenaline going. featuring irelands greatest MTB heros battling it out for the championships. Sponsored by NukeProof.</b> </p></div>
                     </div>
                     <div class="card-action">
@@ -155,21 +170,28 @@ Over 100 competitors played the part of "the hounds" as they tried to outride th
                         "material-icons right">grade</i></button>
                     </div>
                 </div>
-            </div>        
-            
-            
-         
+            </div>
+
+
+
         </div>
         <!--Rewards End-->
     </div>
     <!--Main Content End-->
-    
-    <script src="assets/js/app.js">
-    </script>
-    <script src="assets/js/Controllers/RewardsController.js">
-    </script>
+
+    <script src="assets/js/app.js"></script>
     <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+    <script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js'></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+    <script src="assets/js/Controllers/RewardsController.js"></script>
+    <script src="assets/js/Controllers/AccountController.js"></script>
+    <script src="assets/js/Controllers/NavController.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.button-collapse').sideNav();
+            $('deanPoints').slideDown();
+        });
+    </script>
         <script>
 $( document ).ready(function() {
 $('.button-collapse').sideNav();
