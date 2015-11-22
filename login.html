@@ -18,50 +18,65 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/app.css" type="text/css">
 </head>
+
 <body ng-app="AccountController" style="background-color: #089ad6;">
-    
+
     <!--Main Content-->
     <div class="card hoverable" style="margin-left:45px;width:80%;position: absolute;top: 50%;transform: translateY(-50%);">
         <div class="card-image">
-              <img style="width:60%;margin-left:auto;margin-right:auto;margin-top:5px;"src="assets/img/COLlogin.png"> <br>
+            <img style="width:60%;margin-left:auto;margin-right:auto;margin-top:5px;" src="assets/img/COLlogin.png">
+            <br>
+        </div>
+        <div class="card-content">
+            <p style="color:#6f6f6f;text-align:left;font-size:12px;">Please Login </p>
+            <div class="input-field col s12 m6">
+                <input placeholder="Username" id="username" type="text" class="validate">
             </div>
-                    <div class="card-content">
-                        <p style="color:#6f6f6f;text-align:left;font-size:12px;">Please Login </p>
-                        <div class="input-field col s12 m6">
-          <input placeholder="Username" id="username" type="text" class="validate">
+            <div class="input-field col s12 m6">
+                <input placeholder="Password" id="password" type="password" class="validate">
+            </div>
+            <div id="xxx" style="color:red;"></div>
+            <p style="color:#6f6f6f;text-align:right;font-size:12px;"><u> Forgot Password?</u> </p>
         </div>
-                        <div class="input-field col s12 m6">
-          <input placeholder="Password" id="password" type="text" class="validate">
+        <div class="card-action center-align">
+            <button class="loginBtn btn waves-effect waves-light green" name="action" type="submit">Login<i class="material-icons right">done</i></button>
         </div>
-                        <p style="color:#6f6f6f;text-align:right;font-size:12px;"><u> Forgot Password?</u> </p>
-        </div> 
-                    <div class="card-action center-align">
-                        <button class="btn waves-effect waves-light green" name="action"
-                        type="submit">Login<i class=
-                        "material-icons right">done</i></button>
-                    </div>
-                </div>
-    
-    
-    
+    </div>
+
+
+
     <!-- Compiled and minified JavaScript -->
-            <script src="assets/js/app.js">
+    <script src="assets/js/app.js">
     </script>
     <script src="assets/js/Controllers/RewardsController.js">
     </script>
-        <script src="assets/js/Controllers/AccountController.js">
+    <script src="assets/js/Controllers/AccountController.js">
     </script>
     <script src="assets/js/Controllers/NavController.js">
     </script>
     <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
-    
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
     <script>
-        $(document).ready(function() {
-            $('.button-collapse').sideNav();
-            $('deanPoints').slideDown();
+        $('.loginBtn').on('click', function () {
+            if ($('#password').val() === "password") {
+                document.location = ('/index.html');
+            } else {
+                $('#xxx').html("Error: Username or Password Incorrect");
+            }
         });
 
+
+
+        function createCookie(name, value, days) {
+            if (days) {
+                var date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                var expires = "; expires=" + date.toGMTString();
+            } else var expires = "";
+            document.cookie = name + "=" + value + expires + "; path=/";
+        }
     </script>
 </body>
+
 </html>
