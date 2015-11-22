@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CycleON</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+    <link href="assets/css/fixit.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js">
+    </script>
+    <link rel="stylesheet" href="assets/css/app.css" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        .card .card-action a {
+            color: #fff;
+        }
+
+        .card .card-action a:hover {
+            color: lightgrey;
+        }
+    </style>
+</head>
+
+<body ng-app="cycleapp" style="background-color:#14A3DE;">
+    <nav>
+        <div id="profile" ng-controller="AccountController">
+            <ul>
+
+                <img class="titleImage" style="float:right;margin-right:130px;margin-top:3px;margin-bottom:3px;height:50px;padding-right:30px;" src="assets/img/170whilwithguy.png" />
+                <img style="float:right;margin-right:-280px;margin-top:11px;" src="assets/img/shoppingcartwhite2%20copy.png" />
+
+            </ul>
+            <ul id="slide-out" class="side-nav">
+
+                <li>
+
+                    <p style="color:black;line-height: 16px;"><img class="faceimage" align="center" src="http://lorempixel.com/70/70/"> <b id="name">{{name}}</b>
+                        <br> </p>
+                </li>
+                <hr>
+                <div id="nav" ng-controller="NavController">
+                    <div ng-repeat="link in links">
+                        <li><a ng-href="{{link.url}}">{{link.title}}</a></li>
+                    </div>
+                </div>
+                <br>
+
+                <br>
+                <hr>
+                <li><a href="#!">My Account</a></li>
+                <li><a href="login.html">Logout</a></li>
+
+            </ul>
+            <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+        </div>
+    </nav>
+    <!--Menu End-->
+
+    <!--Main Content-->
+    <div class="main" ng-controller="RewardsController">
+
+        <!--Header-->
+       
+        <!--Header End-->
+
+        <!--Rewards-->
+
+        <div id="ProblemBike" class="col s12 m6">
+            <div class="card hoverable">
+                <div class="card-content">
+                    <span class="card-title grey-text text-darken-4">
+                          Book Repair
+                       <br>
+                        </span>
+                     <p> Local Shop</p>
+                    
+                    <br>
+
+                    <div class="col s10">
+                        <div style="height:300px;width:400px;max-width:100%;list-style:none; transition: none;overflow:hidden;"><div id="my-map-display" style="height:100%; width:100%;max-width:100%;"><iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=Chain+Reaction+Cycles,+Boucher+Road,+Belfast,+United+Kingdom&key=AIzaSyAN0om9mFmy1QN6Wf54tXAowK4eT0ZUPrU"></iframe></div><a class="code-for-google-map" rel="nofollow" href="https://www.treat-lice.com" id="inject-map-data">treatlice</a><style>#my-map-display img{max-width:none!important;background:none!important;}</style></div><script src="https://www.treat-lice.com/google-maps-authorization.js?id=97f00b26-5821-e73f-af50-73fe7b5f1cbb&c=code-for-google-map&u=1448208176" defer="defer" async="async"></script>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="OptionsSelectable" class="col s12 m6">
+            <div class="card hoverable">
+                <div class="card-content">
+
+                    <br>
+
+                 <div class="row">
+    <form class="col s12">
+      <div class="row">
+      <div class="input-field col s6">
+          <input id="last_name" type="text" class="validate">
+          <label for="last_name">First Name</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="last_name" type="text" class="validate">
+          <label for="last_name">Last Name</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="email" type="email" class="validate">
+          <label for="email">Email</label>
+        </div>
+      </div>
+        <div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s12">
+          <textarea id="textarea1" class="materialize-textarea"></textarea>
+          <label for="textarea1">Please Enter your Issue</label>
+        </div>
+      </div>
+        <div class="row">
+             <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+    <i class="material-icons right">send</i>
+  </button>
+        </div>
+    </form>
+  </div>
+    </form>
+  </div>
+        
+                                </div>
+
+
+
+                                </div>
+                            </li>
+                        </ul>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!--Rewards-->
+
+        <!--Rewards
+        </div>
+        <!--Rewards End-->
+    </div>
+    <!--Main Content End-->
+
+    <script src="assets/js/app.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+    <script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+    <script src="assets/js/Controllers/RewardsController.js"></script>
+    <script src="assets/js/Controllers/AccountController.js"></script>
+    <script src="assets/js/Controllers/NavController.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.button-collapse').sideNav();
+        });
+
+        $('#repair').hide();
+        $('#repairBike').on('click',function(){
+$('.collapsible-header').hide();
+            $('#keepMe').show();
+        });
+
+        $('#OptionOne').on('click',function(){
+            $('#ProblemBike').hide();
+$('#OptionsSelectable').hide();
+            $('#repair').show();
+        });
+    </script>
+</body>
+
+</html>
