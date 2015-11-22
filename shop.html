@@ -13,31 +13,44 @@
     <link rel="stylesheet" href="assets/css/app.css" type="text/css">
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
-<body ng-app="cycleapp" class="bg">
-    <!--Menu-->
-        <nav>
-        <ul class="right hide-on-med-and-down">
-            <li><a href="#!">First Sidebar Link</a></li>
-            <li><a href="#!">Second Sidebar Link</a></li>
-        </ul>
-        <ul id="slide-out" class="side-nav">
-             <li>
-                  
-     <p style="color:black;line-height: 16px;"><img style="border-radius: 50px/50px;" align="center" src="http://lorempixel.com/70/70/"> <b>Anabelle Smith</b> <br>   </p></li>
-            <hr>
-            <li><a href="#!">Home</a></li>
-            <li><a href="#!">Fix It</a></li>
-            <li><a href="#!">Shop</a></li>
-            <li><a href="#!">Events</a></li>
-            
-        </ul>
-        <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+<body ng-app="cycleapp" style="background-color:#14A3DE;">
+  <nav>
+        <div id="profile" ng-controller="AccountController">
+            <ul>
+
+                <img class="titleImage" style="float:right;margin-right:130px;margin-top:3px;margin-bottom:3px;height:50px;padding-right:30px;" src="assets/img/170whilwithguy.png"/>
+                <img style="float:right;margin-right:-280px;margin-top:11px;" src="assets/img/shoppingcartwhite2%20copy.png" />
+
+            </ul>
+            <ul id="slide-out" class="side-nav">
+
+                <li>
+
+                    <p style="color:black;line-height: 16px;"><img class="faceimage" align="center" src="http://lorempixel.com/70/70/"> <b id="name">{{name}}</b>
+                        <br> </p>
+                </li>
+                <hr>
+                <div id="nav" ng-controller="NavController">
+                    <div ng-repeat="link in links">
+                        <li><a ng-href="{{link.url}}">{{link.title}}</a></li>
+                    </div>
+                </div>
+                <br>
+
+                <br>
+                <hr>
+                <li><a href="#!">My Account</a></li>
+                <li><a href="login.html">Logout</a></li>
+
+            </ul>
+            <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+        </div>
     </nav>
     <!--Menu End-->
-    
+
     <!--Main Content-->
     <div class="main" ng-controller="RewardsController">
-        
+
         <!--Header-->
         <div id="header">
             <div class="content">
@@ -51,9 +64,9 @@
                 </div>
         </div>
         <!--Header End-->
-                    
+
         <!--Rewards-->
-     
+
             <div class="col s12 m6">
                 <div class="card hoverable">
                     <div class="card-content">
@@ -71,29 +84,29 @@
          <option value="3">Pumps</option>
          <option value="3">Seats</option>
     </select>
-    
+
   </div>
-                      
+
                     </div>
-                   
+
                 </div>
-            </div>        
-            
+            </div>
+
             <div class="col s12 m6">
                 <div class="card hoverable">
                     <div class="card-content">
-                        <div class="row"> 
+                        <div class="row">
                          <div class="col s6"><img src="assets/img/tut/7.jpeg" align="middle"></div>
                          <div class="col s6"> <h4> Continental Grad Prix</h4>
-                            
+
                             <h3 style="color:green"> £28.99</h3>
                             <p> Road Tyre </p>
                              <br>
-                            <p> Rating: ★	★	★	</p>
+                            <p> Rating: ★    ★    ★    </p>
                              </div>
                             </div>
-                        
-                    
+
+
                     </div>
                     <div class="card-action">
                         <button class="btn waves-effect waves-light blue darken-2" name="action"
@@ -104,22 +117,22 @@
                         "material-icons right">grade</i></button>
                     </div>
                 </div>
-            </div>        
-        
+            </div>
+
         <div class="col s12 m6">
                 <div class="card hoverable">
                     <div class="card-content">
-                        <div class="row"> 
+                        <div class="row">
                          <div class="col s6"><img src="assets/img/tut/8.jpeg" align="middle"></div>
                          <div class="col s6"> <h4> Continental Gatorskin</h4>
                              <h3 style="color:green"> £22.99</h3>
                             <p> Road Tyre</p>
                              <br>
-                            <p> Rating: ★	★	★	★	★	</p>
+                            <p> Rating: ★    ★    ★    ★    ★    </p>
                              </div>
                             </div>
-                        
-                    
+
+
                     </div>
                     <div class="card-action">
                         <button class="btn waves-effect waves-light blue darken-2" name="action"
@@ -130,22 +143,22 @@
                         "material-icons right">grade</i></button>
                     </div>
                 </div>
-            </div>        
-        
+            </div>
+
         <div class="col s12 m6">
                 <div class="card hoverable">
                     <div class="card-content">
-                        <div class="row"> 
+                        <div class="row">
                          <div class="col s6"><img src="assets/img/tut/9.jpeg" align="middle"></div>
                          <div class="col s6"> <h4> Vittoria Rubino </h4>
                              <h3 style="color:green"> £15.99</h3>
                             <p> Road Tyre</p>
                              <br>
-                            <p> Rating: ★	★	★	★	</p>
+                            <p> Rating: ★    ★    ★    ★    </p>
                              </div>
                             </div>
-                        
-                    
+
+
                     </div>
                     <div class="card-action">
                         <button class="btn waves-effect waves-light blue darken-2" name="action"
@@ -156,22 +169,22 @@
                         "material-icons right">grade</i></button>
                     </div>
                 </div>
-            </div>        
-        
+            </div>
+
         <div class="col s12 m6">
                 <div class="card hoverable">
                     <div class="card-content">
-                        <div class="row"> 
+                        <div class="row">
                          <div class="col s6"><img src="assets/img/tut/10.jpeg" align="middle"></div>
                          <div class="col s6"> <h4> Continental Grand Prix 4</h4>
                              <h3 style="color:green"> £49.99</h3>
                             <p> All Terrain Tyre</p>
                              <br>
-                            <p> Rating: ★	★	</p>
+                            <p> Rating: ★    ★    </p>
                              </div>
                             </div>
-                        
-                    
+
+
                     </div>
                     <div class="card-action">
                         <button class="btn waves-effect waves-light blue darken-2" name="action"
@@ -182,22 +195,22 @@
                         "material-icons right">grade</i></button>
                     </div>
                 </div>
-            </div>        
-        
+            </div>
+
         <div class="col s12 m6">
                 <div class="card hoverable">
                     <div class="card-content">
-                        <div class="row"> 
+                        <div class="row">
                          <div class="col s6"><img src="assets/img/tut/11.jpeg" align="middle"></div>
                          <div class="col s6"> <h4> Schwalbe Marathon</h4>
                                <h3 style="color:green"> £31.99</h3>
                             <p> Road Tyre</p>
                              <br>
-                            <p> Rating: ★	★	★	</p>
+                            <p> Rating: ★    ★    ★    </p>
                              </div>
                             </div>
-                        
-                    
+
+
                     </div>
                     <div class="card-action">
                         <button class="btn waves-effect waves-light blue darken-2" name="action"
@@ -208,22 +221,22 @@
                         "material-icons right">grade</i></button>
                     </div>
                 </div>
-            </div>        
-        
+            </div>
+
         <div class="col s12 m6">
                 <div class="card hoverable">
                     <div class="card-content">
-                        <div class="row"> 
+                        <div class="row">
                          <div class="col s6"><img src="assets/img/tut/12.jpeg" align="middle"></div>
                          <div class="col s6"> <h4> Continental Road v2</h4>
                             <h3 style="color:green"> £23.99</h3>
                             <p> Road Tyre</p>
                              <br>
-                            <p> Rating: ★	★	★	★	★	</p>
+                            <p> Rating: ★    ★    ★    ★    ★    </p>
                              </div>
                             </div>
-                        
-                    
+
+
                     </div>
                     <div class="card-action">
                         <button class="btn waves-effect waves-light blue darken-2" name="action"
@@ -234,34 +247,35 @@
                         "material-icons right">grade</i></button>
                     </div>
                 </div>
-            </div>        
-        
-      
-            
-                   
-            
+            </div>
+
+
+
+
+
                      <!--Rewards-->
-     
-            
-            
-            
-         
+
+
+
+
+
         </div>
         <!--Rewards End-->
     </div>
     <!--Main Content End-->
-    
-    <script src="assets/js/app.js">
-    </script>
-    <script src="assets/js/Controllers/RewardsController.js">
-    </script>
+
+    <script src="assets/js/app.js"></script>
     <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+    <script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js'></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+    <script src="assets/js/Controllers/RewardsController.js"></script>
+    <script src="assets/js/Controllers/AccountController.js"></script>
+    <script src="assets/js/Controllers/NavController.js"></script>
         <script>
               $(document).ready(function() {
     $('select').material_select();
   });
-         
+
 $( document ).ready(function() {
 $('.button-collapse').sideNav();
 });

@@ -6,7 +6,7 @@ app.controller('NavController',['$scope', function($scope) {
         },
         {
             title: "Fix It",
-            url: "fitit.html"
+            url: "fixit.html"
         },
         {
             title: "Shop",

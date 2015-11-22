@@ -64,7 +64,15 @@
 
                 </div>
             </div>
+
+
+
             <img id="swipe" style="width:100%;margin-top:-7px;" src="assets/img/Img2.png" />
+
+
+
+
+
             <img style="width:100%;margin-top:-7px;" src="assets/img/bluebg2.png" />
 
     </div>
@@ -91,6 +99,18 @@
         $(document).ready(function () {
             $('.button-collapse').sideNav();
             $('deanPoints').slideDown();
+        });
+
+        $('#swipe').on('click',function(){
+
+            if($(this).attr('src')==='assets/img/Img4.png'){
+$(this).attr('src','assets/img/Img2.png');
+                $('bikenametitle').html("Carrera Vulcan Mens Mountain Bike 2015");
+            }else{
+                 $(this).attr('src','assets/img/Img4.png');
+                                $('bikenametitle').html("Vitus Summit Mountain Bike 2016");
+
+            }
         });
     </script>
 
