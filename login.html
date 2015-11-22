@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>CycleON</title>
+
+    <!-- Compiled and minified CSS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js">
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+
+    <link rel="stylesheet" href="assets/css/app.css" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body ng-app="AccountController" style="background-color: #EEEEEE;">
+    
+    <!--Main Content-->
+    <div class="card hoverable" style="position: absolute;top: 50%;transform: translateY(-50%);">
+        <div class="card-image">
+              <img src="assets/img/COL.png">
+            </div>
+                    <div class="card-content">
+                        <div class="input-field col s12 m6">
+          <input placeholder="Username" id="username" type="text" class="validate">
+        </div>
+                        <div class="input-field col s12 m6">
+          <input placeholder="Password" id="password" type="text" class="validate">
+        </div>
+        </div> 
+                    <div class="card-action center-align">
+                        <button class="btn waves-effect waves-light green" name="action"
+                        type="submit">Login<i class=
+                        "material-icons right">done</i></button>
+                    </div>
+                </div>
+    
+    
+    
+    <!-- Compiled and minified JavaScript -->
+            <script src="assets/js/app.js">
+    </script>
+    <script src="assets/js/Controllers/RewardsController.js">
+    </script>
+        <script src="assets/js/Controllers/AccountController.js">
+    </script>
+    <script src="assets/js/Controllers/NavController.js">
+    </script>
+    <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.button-collapse').sideNav();
+            $('deanPoints').slideDown();
+        });
+
+    </script>
+</body>
+</html>
