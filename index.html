@@ -18,7 +18,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
-<body ng-app="cycleapp" style="background-color:#DAE7F1;">
+<body ng-app="cycleapp" style="background-color:#14A3DE;">
     <nav>
         <div id="profile" ng-controller="AccountController">
             <ul>
@@ -65,25 +65,25 @@
         <h5 style="padding-left:20px;padding-top:40px;">Your Bikes</h5>
         <mk-bikeInfo>
             <div class="image">
-                <img style="width:100%;" src="assets/img/Img1.png" />
+                <img style="width:100%;" src="assets/img/bluebg.png" />
                 <div style="position: absolute; top: 140px; left: 0; width: 100%;">
-                    <bikenametitle style="padding-left:20px;">Carrera Vulcan Mens Mountain Bike 2015</bikenametitle>
-                    <biketype style="padding-left:20px;">Mountain Bike</biketype>
+                    <bikenametitle style="padding-left:20px;color:white;">Carrera Vulcan Mens Mountain Bike 2015</bikenametitle>
+                    <biketype style="padding-left:20px;"> Mountain Bike</biketype>
 
                 </div>
             </div>
             <img id="swipe" style="width:100%;margin-top:-7px;" src="assets/img/Img2.png" />
-            <img style="width:100%;margin-top:-7px;" src="assets/img/Img3.png" />
+            <img style="width:100%;margin-top:-7px;" src="assets/img/bluebg2.png" />
 
     </div>
-    <div class="row" style="margin-top:-40px; z-index:0;">
-        <a class="waves-effect waves-light btn">View Reciept</a><a style="margin-left:5px;" class="waves-effect waves-light btn">Shop for Accessories</a>
+    <div class="row" style="margin-top:-40px; z-index:0;text-align:center;">
+        <a class="waves-effect waves-light btn " style="background-color:black;">View Reciept</a><a style="margin-left:5px;background-color:black;" class="waves-effect waves-light btn">Shop for Accessories</a>
     </div>
     <br>
     <br>
-    <footer style="z-index:30230023;">
-        <a class="app-but-buttons waves-effect waves-light btn-large col s6" style="width:49%;background-color:white;color:#00B4FF;" href="fixit.html">Fit It</a>
-        <a class="app-but-buttons waves-effect waves-light btn-large col s6 right" style="width:49%;background-color:white;color:#00B4FF;" href="events.html">Events</a> </footer>
+    <footer style="z-index:30230023;font-size:25px;">
+        <a class="app-but-buttons waves-effect waves-light btn-large col s6" style="width:49%;background-color:white;color:#00B4FF;" href="fixit.html"><i class="material-icons left">settings</i>Fix it</a>
+        <a class="app-but-buttons waves-effect waves-light btn-large col s6 right" style="width:49%;background-color:white;color:#00B4FF;" href="events.html"><i class="material-icons right">my_location</i>Events</a> </footer>
 
 
     <!-- Compiled and minified JavaScript -->
@@ -103,13 +103,6 @@
         $(document).ready(function () {
             $('.button-collapse').sideNav();
             $('deanPoints').slideDown();
-
-            $('#swipe').click(function () {
-                    $('#swipe').animate({
-                        marginLeft: 300px
-                    });
-                };
-            });
         });
     </script>
 
