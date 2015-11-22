@@ -24,13 +24,12 @@
     </style>
 </head>
 
-<body ng-app="cycleapp" class="bg">
-    <!--Menu-->
-    <nav>
+<body ng-app="cycleapp" style="background-color:#14A3DE;">
+  <nav>
         <div id="profile" ng-controller="AccountController">
             <ul>
 
-                <img class="titleImage" style="float:right;margin-right:130px;margin-top:3px;margin-bottom:3px;height:50px;padding-right:30px;" src="assets/img/170whilwithguy.png" />
+                <img class="titleImage" style="float:right;margin-right:130px;margin-top:3px;margin-bottom:3px;height:50px;padding-right:30px;" src="assets/img/170whilwithguy.png"/>
                 <img style="float:right;margin-right:-280px;margin-top:11px;" src="assets/img/shoppingcartwhite2%20copy.png" />
 
             </ul>
@@ -70,8 +69,7 @@
                     <div id="logo"></div>
                 </div>
                 <div class="col s8">
-                    <h1>Fix it</h1>
-                    <span id="reward-count"><h4>Current Bike: Bike Name</h4></span>
+                    <h1>Fix it</h1><br>
                 </div>
             </div>
         </div>
@@ -481,12 +479,13 @@
     </div>
     <!--Main Content End-->
 
-    <script src="assets/js/app.js">
-    </script>
-    <script src="assets/js/Controllers/RewardsController.js">
-    </script>
+      <script src="assets/js/app.js"></script>
     <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+    <script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js'></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+    <script src="assets/js/Controllers/RewardsController.js"></script>
+    <script src="assets/js/Controllers/AccountController.js"></script>
+    <script src="assets/js/Controllers/NavController.js"></script>
     <script>
         $(document).ready(function () {
             $('.button-collapse').sideNav();
