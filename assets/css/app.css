@@ -28,8 +28,8 @@ blue {
 .faceimage {
     border-radius: 50px/50px;
 }
-#name{
-    padding-left:10px;
+#name {
+    padding-left: 10px;
 }
 nav > ul > img {
     height: 50px;
@@ -49,5 +49,5 @@ bikeHead {
 superpod {
     color: white;
     padding-top: 30px;
-    margin-top:40px;
+    margin-top: 40px;
 }
